@@ -55,3 +55,7 @@ color: #799778
   padding-bottom: 10px;
   background-color: rgb(41, 37, 30);
 }
+
+.well {
+  background-color: rgb(41, 37, 30);
+}
