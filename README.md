@@ -9,8 +9,8 @@ For Live Version go to
 https://canvasshare.herokuapp.com
 
 TASK LIST:
-**Fix the Comment-User Association, determine cause of author.username not showing up on gallery/show.ejs in comments
-**Revoking permissions for non-owners of comments for edit/delete
-**Image File Upload and Storage
-**User Profile Pages
-**Donate Button Functionality
+1. Fix the Comment-User Association, determine cause of author.username not showing up on gallery/show.ejs in comments
+2. Revoking permissions for non-owners of comments for edit/delete
+3. Image File Upload and Storage
+4. User Profile Pages
+5. Donate Button Functionality
