@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<div class="container g-font">
+  <div class="row">
+      <h1 style="text-align: center;">Add Review for <%= canvas.name %></h1>
+    <div style="width: 30%; margin: 25px auto; ">
+        <form action="/gallery/<%=canvas._id%>/comments" method="POST">
+          <div class="form-group">
+              <input class="form-control" type="text" name="comment[text]" placeholder="Your comment here.">
+          </div>
+          <div class="form-group">
+              <button class="btn btn-lg btn-prime">Submit</button>
+          </div>
+          <a href="/canvas">Go Back</a>
+        </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>

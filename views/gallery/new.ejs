@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<div class="container g-font">
+  <div class="row">
+    <header class="header-center">
+        <h1>Share a new Canvas!</h1>
+    </header>
+    <form action="/gallery" method="POST">
+    <div class="form-group">
+      <label for="name">What should we call this Canvas?</label>
+      <input class="form-control" type="text" name="name" placeholder="Name of your Art">
+    </div>
+    <div class="form-group">
+      <label for="description">Write us a short description about your piece.</label>
+      <textarea class="form-control" name="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="image">Put the URL of your image here:</label>
+      <input class="form-control" type="text" name="image" placeholder="Image URL">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-lg btn-primary">Submit your new piece!</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+<% include ../partials/footer %>

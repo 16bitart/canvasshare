@@ -1,0 +1,87 @@
+body {
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+#landing-header {
+  font-family: 'Cinzel Decorative', cursive;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 2px 2px 1px #000;
+}
+
+#landing-header h2 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/13eff082-79b8-4a42-9bcd-aa8f32f7fd3b/d93sb29-3a1f4596-b0ad-4790-a00a-e56d595bfcb4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEzZWZmMDgyLTc5YjgtNGE0Mi05YmNkLWFhOGYzMmY3ZmQzYlwvZDkzc2IyOS0zYTFmNDU5Ni1iMGFkLTQ3OTAtYTAwYS1lNTZkNTk1YmZjYjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Rpu5edgswSWuuaErlTyWcSxE3spluGJY_b-PmWdKP2A);
+}
+.slideshow li:nth-child(2) {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/05ae7fdf-1ed9-4261-ab43-8ae6a2e1d02a/ddfoxqx-09886676-4017-4cbf-af17-8060afcd0a64.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA1YWU3ZmRmLTFlZDktNDI2MS1hYjQzLThhZTZhMmUxZDAyYVwvZGRmb3hxeC0wOTg4NjY3Ni00MDE3LTRjYmYtYWYxNy04MDYwYWZjZDBhNjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.QN7t7WLkgwC9UDjEwX-FUtZaZUGZqoMjCBFV-Uqls6w);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rayonist_Lilies_%28Goncharova%2C_1913%29.jpg/800px-Rayonist_Lilies_%28Goncharova%2C_1913%29.jpg);
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/63fcfa5b-ed0a-40a7-aca7-0a67b6dc5987/ddlzktp-a82d1499-da7d-4761-bf94-714d80212a82.png/v1/fill/w_1024,h_571,q_80,strp/so_the_darkness_i_became_by_austroraptorcabazai_ddlzktp-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTcxIiwicGF0aCI6IlwvZlwvNjNmY2ZhNWItZWQwYS00MGE3LWFjYTctMGE2N2I2ZGM1OTg3XC9kZGx6a3RwLWE4MmQxNDk5LWRhN2QtNDc2MS1iZjk0LTcxNGQ4MDIxMmE4Mi5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.lt33fghmZ43U6bf7YhBgKbtxTmgTTZKHPSGoRuNU-SI);
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Canaletto%2C_capriccio_architettonico_con_rovine_ed_edifici_classici%2C_1756_ca._02.JPG/1280px-Canaletto%2C_capriccio_architettonico_con_rovine_ed_edifici_classici%2C_1756_ca._02.JPG);
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+

@@ -1,0 +1,51 @@
+.btn-prime {
+background-color: #8fa68e;
+border: 1px solid #799778;
+color: #fff;
+}
+
+.btn-prime:hover {
+background-color: #6dad6a;
+border: 1px solid #799778;
+color: #fff;
+}
+
+
+.btn-warn {
+background-color: #F1F2c0;
+border: 1px solid rgb(233, 235, 150);
+color: #799778
+}
+
+.btn-warn:hover {
+  background-color: rgb(231, 233, 144);
+  border: 1px solid rgb(233, 235, 150);
+  color: #799778
+}
+
+
+.btn-bad {
+  background-color: #CC3910;
+  border: 1px solid rgb(189, 51, 13);
+  color: white;
+}
+.btn-bad:hover {
+  background-color: rgb(175, 57, 25);
+  border: 1px solid rgb(189, 51, 13);
+  color: white;
+}
+
+
+.jumbotron {
+  font-family: 'Cinzel Decorative', cursive;
+  background-color: rgb(45, 59, 52);
+  color: #F1F2c0;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.thumbnail {
+  padding: 0;
+}

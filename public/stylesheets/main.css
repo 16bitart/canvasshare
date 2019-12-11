@@ -1,0 +1,24 @@
+.formbox{
+  width: 75%;
+  margin: 25px;
+}
+
+.delete-form {
+  display: inline;
+}
+
+body {
+  font-size: 14px;
+  background-color: #332F29;
+  font-family: 'Arsenal', sans-serif;
+}
+
+.g-font {
+  color: #F1F2c0;
+}
+
+.header-center {
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+

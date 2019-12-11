@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<div class="container g-font">
+  <h1>Welcome to your profile page, <%= user.firstName %>. </h1>
+
+  <div class="row">
+    <h3>Your Art</h3>
+    <a class="btn btn-prime" href="/gallery/new">Create a New Canvas</a>
+    <% if (canvas) { %>
+    <table class="table g-font">
+      <thead>
+        <tr>
+          <th>Canvas Name</th>
+          <th>Canvas Description</th>
+          <th>Canvas Controls</th>
+        </tr>
+      </thead>
+      <% canvas.forEach((canvas) => { %>
+      <tbody>
+          <td><%= canvas.name %></td>
+          <td><%= canvas.description %></td>
+          <td><a class="btn btn-prime" href="/gallery/<%= canvas._id %>">Go To Page</a>
+          <a class="btn btn-warn" href="/gallery/<%= canvas._id%>/edit">Edit Canvas</a><form class="delete-form" action="/gallery/<%= canvas._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-bad">Delete</button>
+          </form></td>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } %>
+  </div>
+</div>
+
+
+<% include partials/footer %>

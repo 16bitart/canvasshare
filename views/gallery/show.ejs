@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <p class="lead">CanvasShare</p>
+      <div class="list-group">
+        <li class="list-group-item"><em>Submitted by </em><a href=""><strong><%= canvas.author.username %></strong></a>
+        </li>
+        <li class="list-group-item"><%= moment(canvas.createdAt).fromNow() %></li>
+        <li class="list-group-item"><a class="btn btn-bad" href="#">Donate</a></li>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="thumbnail">
+        <img class="img-responsive" src="<%= canvas.image %>">
+        <div class="caption">
+          <!-- <a class="btn btn-danger pull-right" href="#">Donate</a> -->
+          <h2 class="header-center"><%=canvas.name%></h2>
+          <p><%=canvas.description%></p>
+          <% if(currentUser && canvas.author.id.equals(currentUser._id)){ %>
+          <a class="btn btn-xs btn-warn" href="/gallery/<%= canvas._id%>/edit">Edit Canvas</a>
+          <form class="delete-form" action="/gallery/<%= canvas._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-xs btn-bad">Delete</button>
+          </form>
+          <% } %>
+        </div>
+      </div>
+      <div class="well">
+        <div class="text-right">
+          <hr>
+          <p><a class="btn btn-prime" href="/gallery/<%=canvas._id%>/comments/new">New Comment</a></p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <% canvas.comments.forEach(function(comment){ %>
+            <strong>
+              <p><%= comment.author.username %></p>
+            </strong>
+            <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
+            <p> - <%= comment.text %></p>
+
+            <a class="btn btn-xs btn-warning" 
+            href="/gallery/<%= canvas._id %>/comments/<%= comment._id%>/edit">
+              Edit
+            </a>
+            <form class="delete-form" action="/gallery/<%= canvas._id %>/comments/<%= comment._id%>?_method=DELETE" method="POST">
+              <button class="btn btn-xs btn-danger">Delete</button>
+            </form>
+
+            <% }); %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
