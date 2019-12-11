@@ -15,7 +15,7 @@ require('dotenv').config();
 var app = express();
 
 let connStr = process.env.CONNECTION_STRING;
-let port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 mongoose.connect(connStr, {dbName: 'canvasshare', useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -63,4 +63,4 @@ app.use("/gallery/:id/comments", commentRoutes);
 // Server Config
 // =====================================
 
-app.listen(port, 'localhost', ()=> console.log("Server has started."));
+app.listen(port, ()=> console.log("Server has started."));
