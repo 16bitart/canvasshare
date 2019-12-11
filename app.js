@@ -63,4 +63,4 @@ app.use("/gallery/:id/comments", commentRoutes);
 // Server Config
 // =====================================
 
-app.listen(port, ()=> console.log("Server has started."));
+app.listen(port, 'localhost', ()=> console.log("Server has started."));
