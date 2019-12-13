@@ -4,7 +4,7 @@ Final Project for Web Development - CanvasShare Application
 Must update Environment Variables in .ENV file
 CONNECTION_STRING = yourmongodbconnectionstring
 
-For Live Version go to
+For Live Demo go to
 
 https://canvasshare.herokuapp.com
 
